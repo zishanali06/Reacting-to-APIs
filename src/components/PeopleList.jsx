@@ -22,7 +22,9 @@ class PeopleList extends React.Component {
     }
 
     render() {
-        return (this.state.peopleArray.map((person, index) => {
+        return (
+            //MAPPING THRU THE ARRAY AND DISPLAYING A MovieCard COMPONENT WITH EACH OBJECT IN ARRAY
+            this.state.peopleArray.map((person, index) => {
             return (<PeopleCard key={index} person={person} />)
         }));
     };

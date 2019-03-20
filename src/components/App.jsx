@@ -18,7 +18,8 @@ class App extends React.Component {
     handleFilmClick() {
         this.setState({
             displayMovies: "flex",
-            removeFilmButton: "none",
+            //BELOW WAS JUST BONUS, IT REMOVED THE BUTTON ONCE PRESSED
+            // removeFilmButton: "none",
             displayPeople: "none"
         })
         console.log(this);
@@ -27,7 +28,8 @@ class App extends React.Component {
     handlePeopleClick() {
         this.setState({
             displayPeople: "flex",
-            removePeopleButton: "none",
+            //BELOW WAS JUST BONUS, IT REMOVED THE BUTTON ONCE PRESSED
+            // removePeopleButton: "none",
             displayMovies: "none"
         })
     }
