@@ -22,11 +22,9 @@ class MoviesList extends React.Component {
     }
 
     render() {
-        return (
-            this.state.moviesArray.map((movie, currentindex) => {
-                return (<MovieCard movie={movie} key={currentindex} />)
-            })
-        );
+        return (this.state.moviesArray.map((movie, currentindex) => {
+            return (<MovieCard movie={movie} key={currentindex} />)
+        }));
     }
 }
 

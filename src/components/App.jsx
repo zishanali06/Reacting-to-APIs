@@ -7,12 +7,14 @@ class App extends React.Component {
         super(props);
         this.state = {
             displayMovies: "none",
-            removeFilmButton: "inline-block"
+            removeFilmButton: "inline-block",
+            displayPeople: "none",
+            removePeopleButton: "inline-block"
         }
-        this.handleClick = this.handleClick.bind(this);
+        this.handleFilmClick = this.handleFilmClick.bind(this);
     }
 
-    handleClick() {
+    handleFilmClick() {
         this.setState({
             displayMovies: "flex",
             removeFilmButton: "none"
@@ -28,12 +30,12 @@ class App extends React.Component {
                     <img src="https://ghibliapi.herokuapp.com/images/logo.svg" alt="" className="mx-auto" />
                 </div>
                 <div className="row">
-                    <button className="mx-auto" onClick={this.handleClick} style={{display: this.state.removeFilmButton}}>Load Films</button>
+                    <button className="mx-auto" onClick={this.handleFilmClick} style={{display: this.state.removeFilmButton}}>Load Films</button>
                 </div>
                 <div className="row moviegrid" style={{ display: this.state.displayMovies }}>
                     <MoviesList />
                 </div>
-                <div className="row peoplegrid" style={{ display: "block" }}>
+                <div className="row peoplegrid" style={{ display: "flex" }}>
                     <PeopleList />
                 </div>
             </div>

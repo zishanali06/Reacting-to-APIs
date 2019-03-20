@@ -18,7 +18,7 @@ class MovieCard extends React.Component {
     render() {
         return (
             <div className="col-lg-4 col-md-6">
-                <div className="card my-2" style={{ width: '22rem' }}>
+                <div className="card my-2" style={{ width: '20rem' }}>
                     <div className="card-body">
                         <h5 className="card-title">{this.state.title}</h5>
                         <h6 className="card-subtitle mb-2 text-muted">Release Date: {this.state.release}</h6>

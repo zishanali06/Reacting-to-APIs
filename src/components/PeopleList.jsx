@@ -1,7 +1,8 @@
 import React from 'react';
+import PeopleCard from './PeopleCard';
 
 class PeopleList extends React.Component {
-    constructor(props){
+    constructor(props) {
         super(props);
         this.state = {
             peopleArray: []
@@ -10,17 +11,20 @@ class PeopleList extends React.Component {
 
     componentDidMount() {
         fetch("https://ghibliapi.herokuapp.com/people")
-        .then(resultfromfetch => resultfromfetch.json())
-        .then(resultfromabove => {
-            this.setState({
-                peopleArray: resultfromabove
+            //BELOW THEN IS TO CHANGE THE JSON STRING RECEIVED INTO AN ARRAY OF OBJECTS WE CAN USE IN JAVASCRIPT
+            .then(resultfromfetch => resultfromfetch.json())
+            //BELOW TAKES RESULT ARRAY OF OBJECTS FROM ABOVE FUNCTION AND UPDATES THE peopleArray STATE WITH THE ARRAY
+            .then((resultfromabove) => {
+                this.setState({
+                    peopleArray: resultfromabove
+                })
             })
-            console.log(this.state.peopleArray);
-        })
     }
 
     render() {
-        return (null);
+        return (this.state.peopleArray.map((person, index) => {
+            return (<PeopleCard key={index} person={person} />)
+        }));
     };
 };
 
