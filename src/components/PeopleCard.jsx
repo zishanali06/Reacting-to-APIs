@@ -19,9 +19,9 @@ class PeopleCard extends React.Component {
                 <div className="card mx-auto my-2" style={{width: "16rem"}}>
                     <div className="card-body">
                         <h5 className="card-title">{this.state.name}</h5>
-                        <h6 className="card-subtitle mb-2 text-muted">{this.state.gender}</h6>
-                        <h6 className="card-subtitle mb-2 text-muted">{this.state.eyecolor}</h6>
-                        <h6 className="card-subtitle mb-2 text-muted">{this.state.haircolor}</h6>
+                        <h6 className="card-subtitle mb-2 text-muted">Gender: {this.state.gender}</h6>
+                        <h6 className="card-subtitle mb-2 text-muted">Eye Color: {this.state.eyecolor}</h6>
+                        <h6 className="card-subtitle mb-2 text-muted">Hair Color: {this.state.haircolor}</h6>
                         <a href={this.state.url} className="card-link">Click to See Direct JSON</a>
                     </div>
                 </div>
