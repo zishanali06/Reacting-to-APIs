@@ -11,6 +11,7 @@ class MoviesList extends React.Component {
 
     componentDidMount() {
         fetch("https://ghibliapi.herokuapp.com/films")
+            //BELOW THEN IS TO CHANGE THE JSON STRING RECEIVED INTO AN ARRAY OF OBJECTS WE CAN USE IN JAVASCRIPT
             .then((filmsarrayinjson) => filmsarrayinjson.json())
             .then((resultsfromabove) => {
                 this.setState({

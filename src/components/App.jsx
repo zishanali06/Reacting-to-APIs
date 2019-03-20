@@ -1,6 +1,6 @@
 import React from 'react';
 import MoviesList from './MoviesList';
-import People from './PeopleList';
+import PeopleList from './PeopleList';
 
 class App extends React.Component {
     constructor(props) {
@@ -34,7 +34,7 @@ class App extends React.Component {
                     <MoviesList />
                 </div>
                 <div className="row peoplegrid" style={{ display: "block" }}>
-                    
+                    <PeopleList />
                 </div>
             </div>
         );
